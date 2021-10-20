@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <a href="{% url 'core:vista1' %}">Click</a>
+
+    <ul>
+        {% for producto in Productos %}
+            <li>{{ producto.id }} / {{ producto.name }} / {{ producto.cate.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
